@@ -13,7 +13,7 @@ function App() {
     animate(color, COLORS, { ease: 'easeInOut', duration: 10, repeat: Infinity, repeatType: 'mirror' })
   }, [])
   return (
-    <Router>
+    <Router basename="/farmsim">
       <CustomCursor />
       <motion.div
         className="min-h-screen relative overflow-hidden "
