@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion'
 import { useEffect } from 'react'
 import Home from './pages/1-Home'
