@@ -13,7 +13,7 @@ function App() {
     animate(color, COLORS, { ease: 'easeInOut', duration: 10, repeat: Infinity, repeatType: 'mirror' })
   }, [])
   return (
-    <Router basename="/farmsim">
+    <Router>
       <CustomCursor />
       <motion.div
         className="min-h-screen relative overflow-hidden "
@@ -25,7 +25,6 @@ function App() {
           <main className="max-w-6xl mx-auto px-4 py-12">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="*" element={<Navigate to="/farmsim/" replace />} />
             </Routes>
           </main>
         </div>
