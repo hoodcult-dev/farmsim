@@ -1,11 +1,20 @@
 import React from 'react'
 import { motion, useMotionValue, animate } from 'framer-motion'
 import { useEffect } from 'react'
+import xLogo from '/x-logo.png'
+// import axios from 'axios'
 import pfp from '/pfp.png'
 const COLORS = ['#CE84CF', '#13FFAA', '#1E67C6', '#DD335C']
 
 const Home: React.FC = () => {
   const color = useMotionValue(COLORS[0])
+  // useEffect(() => {
+  //   loadUser()
+  // }, [])
+  // const loadUser = async () => {
+  //   const res = await axios.get('/user') // returns mocked 200 response
+  //   console.log(res)
+  // }
 
   useEffect(() => {
     animate(color, COLORS, { ease: 'easeInOut', duration: 10, repeat: Infinity, repeatType: 'mirror' })
@@ -18,6 +27,15 @@ const Home: React.FC = () => {
     })
     return unsubscribe
   }, [color])
+
+  const handleDownload = () => {
+    const link = document.createElement('a')
+    link.href = pfp // pfp is already a resolved URL thanks to import
+    link.download = 'hoodcult-badge.png' // file name on download
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
 
   return (
     <div className="space-y-12">
@@ -42,11 +60,12 @@ const Home: React.FC = () => {
             Join the collective
           </motion.span>
           <div className="relative w-64 h-64 rounded-lg static-glow-effect hover:scale-110 transition-transform duration-300 self-center flex justify-center">
-            <img src={pfp} className="self-center rounded-lg" alt="" />
+            <img src={pfp} className="self-center rounded-lg" alt="coin-profile-pic" />
           </div>
           <motion.button
             className="cursor-none text-white h-11 px-8 rounded-md transition-all duration-300 static-glow-effect hover:shadow-none hover:scale-105"
             style={{ backgroundColor: color }}
+            onClick={handleDownload}
           >
             DOWNLOAD PFP
           </motion.button>
@@ -109,13 +128,13 @@ const Home: React.FC = () => {
       </div>
       <div className="text-center flex justify-center">
         <a
-          href="https://x.com/pfpscult"
+          href="https://x.com/hoodcultsol"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex self-center"
         >
           <button className="border-gray-800 text-white static-glow-effect h-11 px-8 rounded-md cursor-none">
-            X
+            <img src={xLogo} alt="x-logo" className="max-h-6 " />
           </button>
         </a>
       </div>
