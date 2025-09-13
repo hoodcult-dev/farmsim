@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion'
 import { useEffect } from 'react'
-import pfp from '../assets/bubu.jpg'
+import pfp from '../assets/bubu.png'
 const COLORS = ['#13FFAA', '#1E67C6', '#CE84CF', '#DD335C']
 
 const Home: React.FC = () => {
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
           Welcome to FarmSim
         </motion.h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto hover:text-white transition-all duration-200">
-          Build and manage your dream farm in this immersive simulation game
+          Plant, harvest, and HODL your way to epic crypto crops in this meme-fueled farmfest
         </p>
       </div>
 
@@ -39,7 +39,7 @@ const Home: React.FC = () => {
             className="text-3xl font-bold hover:scale-105 transition-all duration-200 hover-effect hover-glow-effect"
             style={{ color }}
           >
-            Join the cult
+            Join the barnyard
           </motion.span>
           <div className="relative w-64 h-64 rounded-lg static-glow-effect hover:scale-110 transition-transform duration-300 self-center flex justify-center">
             <img src={pfp} className="self-center" alt="" />
@@ -51,7 +51,7 @@ const Home: React.FC = () => {
             DOWNLOAD PFP
           </motion.button>
           <p className="text-[14px] text-gray-400 max-w-2xl mx-auto hover:text-white transition-all duration-200">
-            Download this sacred image and set it as your X profile picture to join the cult
+            Snag this dope tractor meme and set it as your X profile pic to roll with the FarmSim fam
           </p>
         </div>
       </div>
@@ -60,11 +60,11 @@ const Home: React.FC = () => {
         <div className="card-style-logic p-6 rounded-xl text-center space-y-4 hover:scale-105 transition-all duration-300">
           <div className="text-4xl mb-4">🚜</div>
           <motion.h3 className="text-xl font-semibold mb-2 hover-glow-effect" style={{ color }}>
-            Farm Management
+            Crop HODLing
           </motion.h3>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Plant crops, tend to animals, and expand your agricultural empire with advanced farming techniques
-            and modern equipment.
+            Plant your FarmSim tokens, nurture them with dank memes, and grow your crypto stash with epic
+            staking strategies.
           </p>
           <div className="pt-2">
             <motion.span
@@ -80,11 +80,11 @@ const Home: React.FC = () => {
         <div className="card-style-logic p-6 rounded-xl text-center space-y-4 hover:scale-105 transition-all duration-300">
           <div className="text-4xl mb-4">🏪</div>
           <motion.h3 className="text-xl font-semibold mb-2 hover-glow-effect" style={{ color }}>
-            Market Trading
+            Meme Market
           </motion.h3>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Buy supplies, sell your products, and master the art of agricultural commerce in our dynamic
-            marketplace.
+            Swap tokens, trade rare farm memes, and flex your skills in the wildest blockchain bazaar this
+            side of the metaverse.
           </p>
           <div className="pt-2">
             <span className="inline-block bg-blue-600 text-white text-xs px-3 py-1 rounded-full">
@@ -97,11 +97,11 @@ const Home: React.FC = () => {
         <div className="card-style-logic p-6 rounded-xl text-center space-y-4 hover:scale-105 transition-all duration-300 md:col-span-2 lg:col-span-1">
           <div className="text-4xl mb-4">👥</div>
           <motion.h3 className="text-xl font-semibold mb-2 hover-glow-effect" style={{ color }}>
-            Community
+            Barnyard Fam
           </motion.h3>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Connect with fellow farmers, share strategies, and build lasting relationships in our vibrant
-            farming community.
+            Vibe with fellow FarmSim shillers, share moon-worthy tips, and join the rowdiest crypto crew in
+            the digital fields.
           </p>
           <div className="pt-2">
             <span className="inline-block bg-purple-600 text-white text-xs px-3 py-1 rounded-full">
