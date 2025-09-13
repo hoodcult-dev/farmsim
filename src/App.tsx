@@ -25,7 +25,7 @@ function App() {
           <main className="max-w-6xl mx-auto px-4 py-12">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="*" element={<Navigate to="/farmsim" replace />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
         </div>
