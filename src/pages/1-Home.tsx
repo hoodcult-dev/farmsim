@@ -1,7 +1,7 @@
 import React from 'react'
-import { motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion'
+import { motion, useMotionValue, animate } from 'framer-motion'
 import { useEffect } from 'react'
-import pfp from '../assets/bubu.png'
+import pfp from '../assets/bubu.jfif'
 const COLORS = ['#13FFAA', '#1E67C6', '#CE84CF', '#DD335C']
 
 const Home: React.FC = () => {
@@ -26,10 +26,10 @@ const Home: React.FC = () => {
           className="text-5xl font-bold mb-4 hover:scale-105 transition-all duration-200 hover-effect hover-glow-effect"
           style={{ color }}
         >
-          Welcome to FarmSim
+          Welcome to HoodCult
         </motion.h1>
         <p className="text-xl text-gray-400 max-w-2xl mx-auto hover:text-white transition-all duration-200">
-          Plant, harvest, and HODL your way to epic crypto crops in this meme-fueled farmfest
+          Stake, trade, and run the blockchain streets with next-level DeFi domination
         </p>
       </div>
 
@@ -39,10 +39,10 @@ const Home: React.FC = () => {
             className="text-3xl font-bold hover:scale-105 transition-all duration-200 hover-effect hover-glow-effect"
             style={{ color }}
           >
-            Join the barnyard
+            Join the collective
           </motion.span>
           <div className="relative w-64 h-64 rounded-lg static-glow-effect hover:scale-110 transition-transform duration-300 self-center flex justify-center">
-            <img src={pfp} className="self-center" alt="" />
+            <img src={pfp} className="self-center rounded-lg" alt="" />
           </div>
           <motion.button
             className="cursor-none text-white h-11 px-8 rounded-md transition-all duration-300 static-glow-effect hover:shadow-none hover:scale-105"
@@ -51,7 +51,7 @@ const Home: React.FC = () => {
             DOWNLOAD PFP
           </motion.button>
           <p className="text-[14px] text-gray-400 max-w-2xl mx-auto hover:text-white transition-all duration-200">
-            Snag this dope tractor meme and set it as your X profile pic to roll with the FarmSim fam
+            Download our sleek HoodCult token badge and set it as your X profile to rep the DeFi crew
           </p>
         </div>
       </div>
@@ -60,11 +60,10 @@ const Home: React.FC = () => {
         <div className="card-style-logic p-6 rounded-xl text-center space-y-4 hover:scale-105 transition-all duration-300">
           <div className="text-4xl mb-4">🚜</div>
           <motion.h3 className="text-xl font-semibold mb-2 hover-glow-effect" style={{ color }}>
-            Crop HODLing
+            Token Stacking
           </motion.h3>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Plant your FarmSim tokens, nurture them with dank memes, and grow your crypto stash with epic
-            staking strategies.
+            Stake HoodCult coins, grow fat yields, and run the streets with next-level DeFi strategies.
           </p>
           <div className="pt-2">
             <motion.span
@@ -80,11 +79,10 @@ const Home: React.FC = () => {
         <div className="card-style-logic p-6 rounded-xl text-center space-y-4 hover:scale-105 transition-all duration-300">
           <div className="text-4xl mb-4">🏪</div>
           <motion.h3 className="text-xl font-semibold mb-2 hover-glow-effect" style={{ color }}>
-            Meme Market
+            Street Market
           </motion.h3>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Swap tokens, trade rare farm memes, and flex your skills in the wildest blockchain bazaar this
-            side of the metaverse.
+            Buy low, sell high, and master the art of crypto deals in our high-stakes blockchain exchange.
           </p>
           <div className="pt-2">
             <span className="inline-block bg-blue-600 text-white text-xs px-3 py-1 rounded-full">
@@ -97,11 +95,10 @@ const Home: React.FC = () => {
         <div className="card-style-logic p-6 rounded-xl text-center space-y-4 hover:scale-105 transition-all duration-300 md:col-span-2 lg:col-span-1">
           <div className="text-4xl mb-4">👥</div>
           <motion.h3 className="text-xl font-semibold mb-2 hover-glow-effect" style={{ color }}>
-            Barnyard Fam
+            Cult Collective
           </motion.h3>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Vibe with fellow FarmSim shillers, share moon-worthy tips, and join the rowdiest crypto crew in
-            the digital fields.
+            Connect with DeFi bosses, swap yield hacks, and build your rep in our tight-knit HoodCult crew.
           </p>
           <div className="pt-2">
             <span className="inline-block bg-purple-600 text-white text-xs px-3 py-1 rounded-full">
