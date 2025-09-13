@@ -1,81 +1,89 @@
-import React from 'react';
+import React from 'react'
 
 const Home: React.FC = () => {
   return (
-    <div className="space-y-6">
+    <div className="space-y-12">
       <div className="text-center">
-        <h1 className="text-5xl font-bold text-gray-800 mb-4 hover:scale-105 transition-all duration-200 hover-effect">
+        <h1 className="text-5xl font-bold text-green-600 mb-4 hover:scale-105 transition-all duration-200 hover-effect hover-glow-effect">
           Welcome to FarmSim
         </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        <p className="text-xl text-gray-400 max-w-2xl mx-auto hover:text-white transition-all duration-200">
           Build and manage your dream farm in this immersive simulation game
         </p>
       </div>
-      
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-        <div className="card text-center hover-effect">
+
+      <div className="text-center flex justify-center">
+        <div className="w-[450px] border border-gray-800 p-8 rounded-xl card-style-logic flex justify-center flex-col space-y-6">
+          <span className="text-3xl font-bold text-green-600 hover:scale-105 transition-all duration-200 hover-effect hover-glow-effect">
+            Join the cult
+          </span>
+          <div className="relative w-64 h-64 rounded-lg static-glow-effect hover:scale-110 transition-transform duration-300 self-center"></div>
+          <button className="cursor-none bg-green-600 text-white h-11 px-8 rounded-md transition-all duration-300 static-glow-effect hover:shadow-none hover:scale-105">
+            DOWNLOAD PFP
+          </button>
+          <p className="text-[14px] text-gray-400 max-w-2xl mx-auto hover:text-white transition-all duration-200">
+            Download this sacred image and set it as your X profile picture to join the cult
+          </p>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+        {/* Info Box 1 - Farm Management */}
+        <div className="card-style-logic p-6 rounded-xl text-center space-y-4 hover:scale-105 transition-all duration-300">
           <div className="text-4xl mb-4">🚜</div>
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">Manage Farm</h3>
-          <p className="text-gray-600">Plant crops, tend to animals, and expand your land</p>
-          <button className="btn-primary mt-4">Explore Farm</button>
+          <h3 className="text-xl font-semibold text-green-600 mb-2 hover-glow-effect">Farm Management</h3>
+          <p className="text-gray-400 text-sm leading-relaxed">
+            Plant crops, tend to animals, and expand your agricultural empire with advanced farming techniques
+            and modern equipment.
+          </p>
+          <div className="pt-2">
+            <span className="inline-block bg-green-600 text-white text-xs px-3 py-1 rounded-full">
+              Core Feature
+            </span>
+          </div>
         </div>
-        
-        <div className="card text-center hover-effect">
-          <div className="text-4xl mb-4">🌱</div>
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">Grow Crops</h3>
-          <p className="text-gray-600">Plant and harvest various crops throughout the seasons</p>
-          <button className="btn-primary mt-4">Start Growing</button>
-        </div>
-        
-        <div className="card text-center hover-effect">
-          <div className="text-4xl mb-4">🐄</div>
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">Raise Animals</h3>
-          <p className="text-gray-600">Care for livestock and collect valuable resources</p>
-          <button className="btn-primary mt-4 cursor-none">Care for Animals</button>
-        </div>
-        
-        <div className="card text-center hover-effect">
+
+        {/* Info Box 2 - Market Trading */}
+        <div className="card-style-logic p-6 rounded-xl text-center space-y-4 hover:scale-105 transition-all duration-300">
           <div className="text-4xl mb-4">🏪</div>
-          <h3 className="text-xl font-semibold text-gray-800 mb-2">Trade & Sell</h3>
-          <p className="text-gray-600">Buy supplies and sell your products at the market</p>
-          <button className="btn-primary mt-4">Visit Market</button>
+          <h3 className="text-xl font-semibold text-green-600 mb-2 hover-glow-effect">Market Trading</h3>
+          <p className="text-gray-400 text-sm leading-relaxed">
+            Buy supplies, sell your products, and master the art of agricultural commerce in our dynamic
+            marketplace.
+          </p>
+          <div className="pt-2">
+            <span className="inline-block bg-blue-600 text-white text-xs px-3 py-1 rounded-full">
+              Economy
+            </span>
+          </div>
         </div>
-      </div>
-      
-      <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-lg p-8 text-white text-center mt-12 hover-effect">
-        <h2 className="text-3xl font-bold mb-4">Ready to Start Farming?</h2>
-        <p className="text-xl mb-6">Begin your agricultural journey today!</p>
-        <button className="bg-white text-green-600 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">
-          Get Started
-        </button>
-      </div>
-      
-      <div className="mt-12 p-6 bg-gray-100 rounded-lg">
-        <h3 className="text-2xl font-bold text-gray-800 mb-4">Interactive Elements</h3>
-        <div className="space-y-4">
-          <input 
-            type="text" 
-            placeholder="This input has a text cursor" 
-            className="input-field w-full"
-          />
-          <textarea 
-            placeholder="This textarea also has a text cursor"
-            className="input-field w-full h-20"
-          />
-          <div className="flex gap-4">
-            <button className="btn-primary">Pointer Cursor</button>
-            <button className="btn-secondary">Another Button</button>
-            <div 
-              className="p-4 bg-purple-100 rounded cursor-grab draggable"
-              draggable="true"
-            >
-              Drag me! (Grab cursor)
-            </div>
+
+        {/* Info Box 3 - Community */}
+        <div className="card-style-logic p-6 rounded-xl text-center space-y-4 hover:scale-105 transition-all duration-300 md:col-span-2 lg:col-span-1">
+          <div className="text-4xl mb-4">👥</div>
+          <h3 className="text-xl font-semibold text-green-600 mb-2 hover-glow-effect">Community</h3>
+          <p className="text-gray-400 text-sm leading-relaxed">
+            Connect with fellow farmers, share strategies, and build lasting relationships in our vibrant
+            farming community.
+          </p>
+          <div className="pt-2">
+            <span className="inline-block bg-purple-600 text-white text-xs px-3 py-1 rounded-full">
+              Social
+            </span>
           </div>
         </div>
       </div>
+      <div className="text-center flex justify-center">
+        <a
+          href="https://x.com/pfpscult"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex self-center"
+        >
+          <button className="border-gray-800 text-white static-glow-effect h-11 px-8 rounded-md">X</button>
+        </a>
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

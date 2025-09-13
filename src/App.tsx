@@ -1,25 +1,36 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/1-Home';
-import CustomCursor from './components/CustomCursor';
-import './App.scss';
-
-
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { motion, useMotionTemplate, useMotionValue, animate } from 'framer-motion'
+import { useEffect } from 'react'
+import Home from './pages/1-Home'
+import CustomCursor from './components/CustomCursor'
+import './App.scss'
+const COLORS = ['#13FFAA', '#1E67C6', '#CE84CF', '#DD335C']
 function App() {
+  const color = useMotionValue(COLORS[0])
+  const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0, #020617 50%,${color})`
+
+  useEffect(() => {
+    animate(color, COLORS, { ease: 'easeInOut', duration: 10, repeat: Infinity, repeatType: 'mirror' })
+  }, [])
   return (
     <Router>
       <CustomCursor />
-      <div className="min-h-screen relative overflow-hidden">
+      <motion.div
+        className="min-h-screen relative overflow-hidden "
+        style={{
+          backgroundImage,
+        }}
+      >
         <div className="relative z-10">
-          <main className="max-w-6xl mx-auto px-4 py-8">
+          <main className="max-w-6xl mx-auto px-4 py-12">
             <Routes>
               <Route path="/" element={<Home />} />
             </Routes>
           </main>
         </div>
-      </div>
+      </motion.div>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App
