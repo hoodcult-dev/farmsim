@@ -1,8 +1,8 @@
 import React from 'react'
 import { motion, useMotionValue, animate } from 'framer-motion'
 import { useEffect } from 'react'
-import pfp from '../assets/bubu.jfif'
-const COLORS = ['#13FFAA', '#1E67C6', '#CE84CF', '#DD335C']
+import pfp from '/pfp.png'
+const COLORS = ['#CE84CF', '#13FFAA', '#1E67C6', '#DD335C']
 
 const Home: React.FC = () => {
   const color = useMotionValue(COLORS[0])

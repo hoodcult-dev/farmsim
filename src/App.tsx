@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import Home from './pages/1-Home'
 import CustomCursor from './components/CustomCursor'
 import './App.scss'
-const COLORS = ['#13FFAA', '#1E67C6', '#CE84CF', '#DD335C']
+const COLORS = ['#CE84CF', '#13FFAA', '#1E67C6', '#DD335C']
 function App() {
   const color = useMotionValue(COLORS[0])
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0, #020617 50%,${color})`
